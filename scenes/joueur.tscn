@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://baa25mewplq8j"]
+
+[ext_resource type="Script" uid="uid://dxg57g1ilrfig" path="res://scripts/joueur.gd" id="1_uj1k6"]
+[ext_resource type="SpriteFrames" uid="uid://h8r753xou42i" path="res://assets/spritesheets/joueur/frames_mobilite.tres" id="2_2y66e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uj1k6"]
+radius = 47.0
+height = 136.0
+
+[node name="Joueur" type="CharacterBody2D" unique_id=795832157]
+script = ExtResource("1_uj1k6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579131202]
+position = Vector2(590, 330)
+shape = SubResource("CapsuleShape2D_uj1k6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1141013856]
+position = Vector2(591, 327.625)
+scale = Vector2(2.2812495, 2.1445313)
+sprite_frames = ExtResource("2_2y66e")
+animation = &"statique_haut"
+frame_progress = 0.3065024
