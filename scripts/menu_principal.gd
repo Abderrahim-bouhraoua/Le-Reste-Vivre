@@ -54,7 +54,7 @@ func _on_fade_timer_timeout() -> void:
 			en_transition = false
 			$ButtonManager.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			$Fade_transition/AnimationPlayer.play("fade_out")
-			#a faire plus tard
+			get_tree().change_scene_to_file("res://scenes/menu_options.tscn")
 			
 		boutonMenu.QUITTER:
 			get_tree().quit()

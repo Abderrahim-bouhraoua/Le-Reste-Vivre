@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dhi5cf8wkx2i0" path="res://assets/interface/boutons/quitter_pressed.png" id="9_shudv"]
 [ext_resource type="Texture2D" uid="uid://ohyg5jrwvt7k" path="res://assets/interface/boutons/quitter_hovered.png" id="10_xrwco"]
 [ext_resource type="PackedScene" uid="uid://bcymh08aawmj7" path="res://scenes/fade_transition.tscn" id="11_jaljy"]
+[ext_resource type="Texture2D" uid="uid://cyr6c5gf4kjhs" path="res://assets/images/logo.png" id="12_hucf5"]
 
 [node name="MenuPrincipal" type="Node2D" unique_id=1123434320]
 script = ExtResource("1_lgh5n")
@@ -64,6 +65,11 @@ modulate = Color(1, 1, 1, 0)
 color = Color(0.13149942, 0.13149942, 0.13149942, 1)
 
 [node name="fade_timer" type="Timer" parent="Fade_transition" unique_id=1017364573]
+
+[node name="logo" type="Sprite2D" parent="." unique_id=235531035]
+position = Vector2(397.00003, 236)
+scale = Vector2(0.85962975, 0.8043028)
+texture = ExtResource("12_hucf5")
 
 [connection signal="pressed" from="ButtonManager/Jouer" to="." method="_on_jouer_pressed"]
 [connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
