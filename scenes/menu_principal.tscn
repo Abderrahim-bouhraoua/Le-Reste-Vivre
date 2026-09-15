@@ -60,6 +60,8 @@ stretch_mode = 0
 
 [node name="Fade_transition" parent="." unique_id=812621672 instance=ExtResource("11_jaljy")]
 visible = false
+modulate = Color(1, 1, 1, 0)
+color = Color(0.13149942, 0.13149942, 0.13149942, 1)
 
 [node name="fade_timer" type="Timer" parent="Fade_transition" unique_id=1017364573]
 
