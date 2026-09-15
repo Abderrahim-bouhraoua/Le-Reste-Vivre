@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://vw2jm4ut5kh8"]
+
+[ext_resource type="Script" uid="uid://jjweutts8488" path="res://scripts/menu_principal.gd" id="1_lgh5n"]
+[ext_resource type="Texture2D" uid="uid://beak5vg13d2dh" path="res://assets/interface/boutons/jouer_norm.png" id="2_jaljy"]
+[ext_resource type="Texture2D" uid="uid://bn8ujk1trwaey" path="res://assets/interface/boutons/jouer_pressed.png" id="3_hucf5"]
+[ext_resource type="Texture2D" uid="uid://c2thb42lxbndj" path="res://assets/interface/boutons/jouer_hovered.png" id="4_qswqd"]
+[ext_resource type="Texture2D" uid="uid://7oo33grbew4d" path="res://assets/interface/boutons/options_norm.png" id="5_u72up"]
+[ext_resource type="Texture2D" uid="uid://bu4pocu58rcn0" path="res://assets/interface/boutons/options_pressed.png" id="6_tpt6j"]
+[ext_resource type="Texture2D" uid="uid://d0717volrmqs1" path="res://assets/interface/boutons/options_hovered.png" id="7_kodgl"]
+[ext_resource type="Texture2D" uid="uid://2juccqpgt2h8" path="res://assets/interface/boutons/quitter_norm.png" id="8_icrni"]
+[ext_resource type="Texture2D" uid="uid://dhi5cf8wkx2i0" path="res://assets/interface/boutons/quitter_pressed.png" id="9_shudv"]
+[ext_resource type="Texture2D" uid="uid://ohyg5jrwvt7k" path="res://assets/interface/boutons/quitter_hovered.png" id="10_xrwco"]
+[ext_resource type="PackedScene" uid="uid://bcymh08aawmj7" path="res://scenes/fade_transition.tscn" id="11_jaljy"]
+
+[node name="MenuPrincipal" type="Node2D" unique_id=1123434320]
+script = ExtResource("1_lgh5n")
+
+[node name="ButtonManager" type="Control" parent="." unique_id=258375252]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Jouer" type="TextureButton" parent="ButtonManager" unique_id=1613061816]
+texture_filter = 1
+layout_mode = 0
+offset_left = 810.0
+offset_top = 40.0
+offset_right = 1082.0
+offset_bottom = 318.0
+texture_normal = ExtResource("2_jaljy")
+texture_pressed = ExtResource("3_hucf5")
+texture_hover = ExtResource("4_qswqd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Options" type="TextureButton" parent="ButtonManager" unique_id=967142951]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 220.0
+offset_right = 1082.0
+offset_bottom = 498.0
+texture_normal = ExtResource("5_u72up")
+texture_pressed = ExtResource("6_tpt6j")
+texture_hover = ExtResource("7_kodgl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Quitter" type="TextureButton" parent="ButtonManager" unique_id=1495092597]
+layout_mode = 0
+offset_left = 810.0
+offset_top = 400.0
+offset_right = 1082.0
+offset_bottom = 678.0
+texture_normal = ExtResource("8_icrni")
+texture_pressed = ExtResource("9_shudv")
+texture_hover = ExtResource("10_xrwco")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Fade_transition" parent="." unique_id=812621672 instance=ExtResource("11_jaljy")]
+visible = false
+
+[node name="fade_timer" type="Timer" parent="Fade_transition" unique_id=1017364573]
+
+[connection signal="pressed" from="ButtonManager/Jouer" to="." method="_on_jouer_pressed"]
+[connection signal="pressed" from="ButtonManager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonManager/Quitter" to="." method="_on_quitter_pressed"]
+[connection signal="timeout" from="Fade_transition/fade_timer" to="." method="_on_fade_timer_timeout"]

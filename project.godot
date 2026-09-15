@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Grand Theft APL"
-run/main_scene="uid://cd530e6by5783"
+run/main_scene="uid://vw2jm4ut5kh8"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://d3k8emt7owuk3"
 
