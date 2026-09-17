@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://6ug5s016p5qc"]
+
+[ext_resource type="FontFile" uid="uid://dmw1s5qslwth2" path="res://assets/font.ttf" id="1_i0r7t"]
+[ext_resource type="Script" uid="uid://ok83ddvstxx7" path="res://scripts/menu_selection_difficulte.gd" id="1_ooamh"]
+[ext_resource type="Texture2D" uid="uid://cl3na8mw6s83i" path="res://assets/interface/boutons/retour_norm.png" id="2_56rbj"]
+[ext_resource type="PackedScene" uid="uid://baa25mewplq8j" path="res://scenes/joueur.tscn" id="2_frndo"]
+[ext_resource type="Texture2D" uid="uid://dupbe63wufv1c" path="res://assets/interface/boutons/retourn_pressed.png" id="3_kued0"]
+[ext_resource type="Texture2D" uid="uid://cgviswtocjprb" path="res://assets/interface/boutons/retour_hovered.png" id="4_qv7va"]
+[ext_resource type="Texture2D" uid="uid://beak5vg13d2dh" path="res://assets/interface/boutons/jouer_norm.png" id="7_qv7va"]
+[ext_resource type="Texture2D" uid="uid://bn8ujk1trwaey" path="res://assets/interface/boutons/jouer_pressed.png" id="8_ygah1"]
+[ext_resource type="Texture2D" uid="uid://c2thb42lxbndj" path="res://assets/interface/boutons/jouer_hovered.png" id="9_84bgl"]
+
+[node name="MenuSelectionDifficulte" type="Node2D" unique_id=882669443]
+script = ExtResource("1_ooamh")
+
+[node name="btnBack" type="TextureButton" parent="." unique_id=1706516192]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+offset_left = 49.0
+offset_top = 489.0
+offset_right = 282.0
+offset_bottom = 609.0
+texture_normal = ExtResource("2_56rbj")
+texture_pressed = ExtResource("3_kued0")
+texture_hover = ExtResource("4_qv7va")
+stretch_mode = 0
+
+[node name="CadreSelection" type="Panel" parent="." unique_id=1833513562]
+offset_left = 51.0
+offset_top = 142.0
+offset_right = 91.0
+offset_bottom = 182.0
+
+[node name="lblTitre" type="RichTextLabel" parent="." unique_id=807231130]
+offset_left = 51.0
+offset_top = 19.0
+offset_right = 1139.0
+offset_bottom = 79.0
+theme_override_fonts/normal_font = ExtResource("1_i0r7t")
+theme_override_font_sizes/normal_font_size = 100
+text = "Selectionnez la personnage :"
+
+[node name="exampleNatif" parent="." unique_id=795832157 instance=ExtResource("2_frndo")]
+position = Vector2(-331, -37)
+
+[node name="btnJouer" type="TextureButton" parent="." unique_id=699488443]
+texture_filter = 1
+offset_left = 839.0
+offset_top = 413.0
+offset_right = 1111.0
+offset_bottom = 691.0
+texture_normal = ExtResource("7_qv7va")
+texture_pressed = ExtResource("8_ygah1")
+texture_hover = ExtResource("9_84bgl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="btnJouer" to="." method="_on_btn_jouer_pressed"]

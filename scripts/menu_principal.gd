@@ -48,7 +48,7 @@ func _on_quitter_pressed() -> void:
 func _on_fade_timer_timeout() -> void:
 	match type_bouton:
 		boutonMenu.JOUER:
-			get_tree().change_scene_to_file("res://scenes/main.tscn")
+			get_tree().change_scene_to_file("res://scenes/menu_selection_difficulte.tscn")
 
 		boutonMenu.OPTIONS:
 			en_transition = false
