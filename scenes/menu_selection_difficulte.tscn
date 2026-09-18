@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://dmw1s5qslwth2" path="res://assets/font.ttf" id="1_i0r7t"]
 [ext_resource type="Script" uid="uid://ok83ddvstxx7" path="res://scripts/menu_selection_difficulte.gd" id="1_ooamh"]
 [ext_resource type="Texture2D" uid="uid://cl3na8mw6s83i" path="res://assets/interface/boutons/retour_norm.png" id="2_56rbj"]
-[ext_resource type="PackedScene" uid="uid://baa25mewplq8j" path="res://scenes/joueur.tscn" id="2_frndo"]
 [ext_resource type="Texture2D" uid="uid://dupbe63wufv1c" path="res://assets/interface/boutons/retourn_pressed.png" id="3_kued0"]
 [ext_resource type="Texture2D" uid="uid://cgviswtocjprb" path="res://assets/interface/boutons/retour_hovered.png" id="4_qv7va"]
 [ext_resource type="Texture2D" uid="uid://beak5vg13d2dh" path="res://assets/interface/boutons/jouer_norm.png" id="7_qv7va"]
@@ -39,9 +38,6 @@ offset_bottom = 79.0
 theme_override_fonts/normal_font = ExtResource("1_i0r7t")
 theme_override_font_sizes/normal_font_size = 100
 text = "Selectionnez la personnage :"
-
-[node name="exampleNatif" parent="." unique_id=795832157 instance=ExtResource("2_frndo")]
-position = Vector2(-331, -37)
 
 [node name="btnJouer" type="TextureButton" parent="." unique_id=699488443]
 texture_filter = 1
