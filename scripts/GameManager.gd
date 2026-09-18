@@ -1,5 +1,4 @@
 extends Node
-
 #fichier pour gerer toutes les statistiques du joueur
 #est chargé en autoload singleton durant toute la durée du jeu
 #pour que rien ne soit détruit
@@ -15,6 +14,9 @@ var stress : float = 0
 
 func initialiser_partie(profil : profil_difficulte) -> void:
 	profil_choisi = profil
+	
+	#ca se transorme en int mais vzy cest bon ya 0 1 ou 2
+	print("difficulté choisie : ", str(profil_choisi))
 	
 	#Ici on reglera les stats en fonction du profil
 	#

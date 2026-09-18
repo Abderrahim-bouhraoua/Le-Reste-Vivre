@@ -18,5 +18,5 @@ shape = SubResource("CapsuleShape2D_uj1k6")
 position = Vector2(591, 327.625)
 scale = Vector2(2.2812495, 2.1445313)
 sprite_frames = ExtResource("2_2y66e")
-animation = &"statique_haut"
-frame_progress = 0.3065024
+animation = &"marche_haut"
+frame_progress = 0.08816418

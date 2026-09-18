@@ -16,8 +16,18 @@ var derniere_direction : String = "haut"
 func _ready():
 	#executé au demarrage
 	#on changera la texture de leleve en fonction de la difficulté
-	
-	anim.sprite_frames = frames_mobilite
+
+	match GameManager.profil_choisi:
+		
+		GameManager.profil_difficulte.NATIF:
+			anim.sprite_frames = frames_natif
+			
+		GameManager.profil_difficulte.RESIDENT:
+			anim.sprite_frames = frames_resident
+		
+		GameManager.profil_difficulte.MOBILITE:
+			anim.sprite_frames = frames_mobilite
+			
 	
 func _physics_process(_delta: float) -> void:
 	var direction : Vector2 = Vector2.ZERO

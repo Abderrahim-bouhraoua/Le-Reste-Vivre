@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dbcfka753qxf1" path="res://assets/images/diff_natif.png" id="9_gwhgv"]
 [ext_resource type="Texture2D" uid="uid://by0hbtuc27cfx" path="res://assets/images/diff_resident.png" id="10_502ht"]
 [ext_resource type="Texture2D" uid="uid://d3tqpf5i4oalw" path="res://assets/images/diff_mobilite.png" id="11_gvikt"]
-[ext_resource type="PackedScene" uid="uid://bcymh08aawmj7" path="res://scenes/fade_transition.tscn" id="12_gwhgv"]
 
 [node name="MenuSelectionDifficulte" type="Node2D" unique_id=882669443]
 script = ExtResource("1_ooamh")
@@ -38,10 +37,10 @@ offset_bottom = 309.0
 offset_left = 51.0
 offset_top = 19.0
 offset_right = 1139.0
-offset_bottom = 89.0
+offset_bottom = 79.0
 theme_override_fonts/normal_font = ExtResource("1_i0r7t")
 theme_override_font_sizes/normal_font_size = 100
-text = "Selectionnez le personnage :"
+text = "Selectionnez la personnage :"
 
 [node name="btnJouer" type="TextureButton" parent="." unique_id=699488443]
 texture_filter = 1
@@ -70,17 +69,4 @@ position = Vector2(960, 205)
 scale = Vector2(4.4583325, 3.5382655)
 texture = ExtResource("11_gvikt")
 
-[node name="lblDescDifficulte" type="RichTextLabel" parent="." unique_id=422806576]
-offset_left = 107.0
-offset_top = 311.0
-offset_right = 1072.0
-offset_bottom = 480.0
-theme_override_fonts/normal_font = ExtResource("1_i0r7t")
-theme_override_font_sizes/normal_font_size = 50
-
-[node name="ColorRect" parent="." unique_id=812621672 instance=ExtResource("12_gwhgv")]
-visible = false
-modulate = Color(1, 1, 1, 0)
-
-[connection signal="pressed" from="btnBack" to="." method="_on_btn_back_pressed"]
 [connection signal="pressed" from="btnJouer" to="." method="_on_btn_jouer_pressed"]
