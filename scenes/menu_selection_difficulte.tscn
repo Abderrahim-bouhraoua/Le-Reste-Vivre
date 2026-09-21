@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://dmw1s5qslwth2" path="res://assets/font.ttf" id="1_i0r7t"]
 [ext_resource type="Script" uid="uid://ok83ddvstxx7" path="res://scripts/menu_selection_difficulte.gd" id="1_ooamh"]
 [ext_resource type="Texture2D" uid="uid://cl3na8mw6s83i" path="res://assets/interface/boutons/retour_norm.png" id="2_56rbj"]
+[ext_resource type="VideoStream" uid="uid://bwgryrhywaepc" path="res://assets/images/menuBackground.ogv" id="2_502ht"]
 [ext_resource type="Texture2D" uid="uid://dupbe63wufv1c" path="res://assets/interface/boutons/retourn_pressed.png" id="3_kued0"]
 [ext_resource type="Texture2D" uid="uid://cgviswtocjprb" path="res://assets/interface/boutons/retour_hovered.png" id="4_qv7va"]
 [ext_resource type="Texture2D" uid="uid://beak5vg13d2dh" path="res://assets/interface/boutons/jouer_norm.png" id="7_qv7va"]
@@ -15,6 +16,14 @@
 
 [node name="MenuSelectionDifficulte" type="Node2D" unique_id=882669443]
 script = ExtResource("1_ooamh")
+
+[node name="Background" type="VideoStreamPlayer" parent="." unique_id=1820030264]
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("2_502ht")
+autoplay = true
+expand = true
+loop = true
 
 [node name="btnBack" type="TextureButton" parent="." unique_id=1706516192]
 texture_filter = 1

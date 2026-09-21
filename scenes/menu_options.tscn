@@ -3,12 +3,21 @@
 [ext_resource type="FontFile" uid="uid://dmw1s5qslwth2" path="res://assets/font.ttf" id="1_fh16r"]
 [ext_resource type="Script" uid="uid://bpxuj6qg6fhuj" path="res://scripts/menu_options.gd" id="1_yaf4l"]
 [ext_resource type="PackedScene" uid="uid://bcymh08aawmj7" path="res://scenes/fade_transition.tscn" id="2_fard1"]
+[ext_resource type="VideoStream" uid="uid://bwgryrhywaepc" path="res://assets/images/menuBackground.ogv" id="2_g3ixy"]
 [ext_resource type="Texture2D" uid="uid://cl3na8mw6s83i" path="res://assets/interface/boutons/retour_norm.png" id="4_g3ixy"]
 [ext_resource type="Texture2D" uid="uid://dupbe63wufv1c" path="res://assets/interface/boutons/retourn_pressed.png" id="5_yhdes"]
 [ext_resource type="Texture2D" uid="uid://cgviswtocjprb" path="res://assets/interface/boutons/retour_hovered.png" id="6_catab"]
 
 [node name="menu_options" type="Node2D" unique_id=1689008689]
 script = ExtResource("1_yaf4l")
+
+[node name="Background" type="VideoStreamPlayer" parent="." unique_id=615822832]
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("2_g3ixy")
+autoplay = true
+expand = true
+loop = true
 
 [node name="lblSon" type="RichTextLabel" parent="." unique_id=949536365]
 custom_minimum_size = Vector2(200, 200)

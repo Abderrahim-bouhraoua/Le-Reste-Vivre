@@ -12,9 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://ohyg5jrwvt7k" path="res://assets/interface/boutons/quitter_hovered.png" id="10_xrwco"]
 [ext_resource type="PackedScene" uid="uid://bcymh08aawmj7" path="res://scenes/fade_transition.tscn" id="11_jaljy"]
 [ext_resource type="Texture2D" uid="uid://cyr6c5gf4kjhs" path="res://assets/images/logo.png" id="12_hucf5"]
+[ext_resource type="VideoStream" uid="uid://bwgryrhywaepc" path="res://assets/images/menuBackground.ogv" id="13_qswqd"]
 
 [node name="MenuPrincipal" type="Node2D" unique_id=1123434320]
 script = ExtResource("1_lgh5n")
+
+[node name="Background" type="VideoStreamPlayer" parent="." unique_id=220891026]
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("13_qswqd")
+autoplay = true
+expand = true
+loop = true
 
 [node name="ButtonManager" type="Control" parent="." unique_id=258375252]
 layout_mode = 3
